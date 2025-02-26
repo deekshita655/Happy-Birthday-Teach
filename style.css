@@ -1,0 +1,124 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #ff4081;
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+.signature {
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Glowing Text Effect */
+.glow {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493;
+    }
+}
+
+/* Floating Balloons */
+.balloons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle, #ffcc00, #ff6600);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: floatUp 5s infinite ease-in-out;
+}
+
+.balloon1 { left: 10%; animation-duration: 6s; }
+.balloon2 { left: 30%; animation-duration: 7s; background: radial-gradient(circle, #00ccff, #0066ff); }
+.balloon3 { left: 60%; animation-duration: 6s; background: radial-gradient(circle, #ff66cc, #ff0066); }
+.balloon4 { left: 80%; animation-duration: 7s; background: radial-gradient(circle, #99ff66, #33cc33); }
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* Fireworks Animation */
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.firework {
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    position: absolute;
+    border-radius: 50%;
+    animation: explode 1.5s infinite ease-in-out;
+}
+
+.firework1 { top: 20%; left: 30%; background: red; animation-delay: 0.5s; }
+.firework2 { top: 50%; left: 70%; background: blue; animation-delay: 1s; }
+.firework3 { top: 80%; left: 50%; background: green; animation-delay: 1.5s; }
+
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(5); opacity: 0.5; }
+    100% { transform: scale(8); opacity: 0; }
+}
+
+/* Fade In Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
